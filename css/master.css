@@ -1,0 +1,61 @@
+/*
+Theme: Diecinuevenoventa
+Version: 2
+Author: mariesnavarro.mn
+
+Verde 1: #517a76 claro
+Verde 2: #2c413e oscuro
+Gris 1: #636463 claro
+Gris 2: #343434 oscuro
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike,
+sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption,
+footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+{margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block; }
+ol, ul {list-style: none; }
+#size{ display: none; }
+@font-face {
+font-family: "CalibreR";
+src: url("fonts/Calibre-Regular.eot");
+src: url("fonts/Calibre-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/Calibre-Regular.woff") format("woff"), url("fonts/Calibre-Regular.ttf") format("truetype");
+font-weight: 400;
+font-style: normal; }
+@font-face {
+font-family: "CalibreM";
+src: url("fonts/Calibre-Medium.eot");
+src: url("fonts/Calibre-Medium.eot?#iefix") format("embedded-opentype"), url("fonts/Calibre-Medium.woff") format("woff"), url("fonts/Calibre-Medium.ttf") format("truetype");
+font-weight: 600;
+font-style: bold; }
+*{margin: 0; padding: 0; box-sizing: border-box; }
+* a{ cursor: pointer; text-decoration: none; color: #517a76;}
+body{
+  font-size: 16px;
+  width: 100vw;
+  min-width: 300px;
+  font-family: 'CalibreR', sans-serif;
+  font-weight: 400;
+  color: #636463;
+  background: #fff;
+}
+h1,h2,h3,h4,b {
+  font-family: "CalibreM", sans-serif;
+  font-weight: 600;
+}
+.trans {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -ms-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out }
+.hideDisplay { display: none }
+.showDisplayFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex }
+.backImg{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
