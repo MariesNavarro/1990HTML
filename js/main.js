@@ -2,7 +2,7 @@
 
 var checkBowser = false;
 if(bowser.mobile || bowser.tablet || /SymbianOS/.test(window.navigator.userAgent)) checkBowser = true;
-window.console.log("%cCoded by Mn", "color:#34408f;  font-size: 10px; background:#000; padding:2px;");
+window.console.log("%cCoded by Mn", "color:#34408f;  font-size: 10px; background:#000; padding:20px;");
 function _(el){return document.querySelector(el); }
 function __(el){return document.querySelectorAll(el); }
 
@@ -78,10 +78,21 @@ function swipeClass(c1, c2, arr){
   arr[1].classList.add(c1);
 }
 function contact(c){
+  var wr = _('#contact'),
+      m = _('#nav');
   if(c === 'open'){
-    console.log("Contacto open");
+
+    wr.style.display = "block";
+    setTimeout(function(){
+      m.style.opacity = "0";
+      wr.style.opacity = "1";
+    },550);
   } else {
-    console.log("Contacto close");
+    m.style.opacity = "1";
+    wr.style.opacity = "0";
+    setTimeout(function(){
+        wr.style.display = "none";
+    },550);
   }
 }
 

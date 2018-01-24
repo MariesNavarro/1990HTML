@@ -113,11 +113,11 @@ mariesnavarro.mn
           que vaya encaminado con nuestros clientes.
         </p>
         <div id="redes">
-          <a href="https://vimeo.com/diecinuevenoventa" rel=“noopener noreferrer” target=“_blank”><img src="img/ic/vim_out.svg" onmouseover="overIcon('over', 'vim_', this)" onmouseout="overIcon('out', 'vim_', this)" width="35"></a>
-          <a href="https://www.instagram.com/diecinueve.noventa/" rel=“noopener noreferrer” target=“_blank”><img src="img/ic/ig_out.svg" onmouseover="overIcon('over', 'ig_', this)" onmouseout="overIcon('out', 'ig_', this)" width="35"></a>
-          <a href="https://www.facebook.com/19noventa/" rel=“noopener noreferrer” target=“_blank”><img src="img/ic/fb_out.svg" onmouseover="overIcon('over', 'fb_', this)" onmouseout="overIcon('out', 'fb_', this)" width="35"></a>
+          <a href="https://vimeo.com/diecinuevenoventa" rel=“noopener noreferrer” target=“_blank”><img src="img/ic/vim_out.svg" onmouseover="overIcon('over', 'vim_', this)" onmouseout="overIcon('out', 'vim_', this)" width="30"></a>
+          <a href="https://www.instagram.com/diecinueve.noventa/" rel=“noopener noreferrer” target=“_blank”><img src="img/ic/ig_out.svg" onmouseover="overIcon('over', 'ig_', this)" onmouseout="overIcon('out', 'ig_', this)" width="30"></a>
+          <a href="https://www.facebook.com/19noventa/" rel=“noopener noreferrer” target=“_blank”><img src="img/ic/fb_out.svg" onmouseover="overIcon('over', 'fb_', this)" onmouseout="overIcon('out', 'fb_', this)" width="30"></a>
         </div>
-        <p>Todos Los Derechos Reservados</p>
+        <p style="color:#fff">Todos Los Derechos Reservados</p>
       </div>
 
     </nav>
@@ -130,22 +130,23 @@ mariesnavarro.mn
         <li class="backImg" style="background: yellow;)"></li>
       </ul>
     </div>
-    <div id="contact">
+    <div id="contact" class="trans">
       <ul class="showDisplayFlex">
         <div></div>
         <a id="logo" href="index.html">
           <img class="trans" src="img/logotipo-letrasverde-diecinuevenoventa.svg" height="35">
         </a>
-        <a href="">
-          <img class="trans" src="img/ic/close.svg" height="23">
+        <a role="button" onmouseover="overClose('over', this)" onmouseout="overClose('out', this)" onclick="contact('close')">
+          <span class="cw45 trans"></span>
+          <span class="ccw45 trans"></span>
         </a>
       </ul>
       <div id="wr">
         <header>
           <p>Ponte en contacto con nosotros</p>
           <div>
-            <p> Juan Vázquez De Mella 442, Morales Polanco. <br> Miguel Hidalgo, #11510 <b>Ciudad de México</b>  </p>
-            <p> +52 55 123 4567 <br> <b>info@diecinuevenoventa.com</b> </p>
+            <p> Juan Vázquez De Mella 442,<br> Morales Polanco, Miguel Hidalgo <b>Ciudad de México</b>  </p>
+            <p> +52 55 123 4567 <br> <b style="color:#517a76">info@diecinuevenoventa.com</b> </p>
           </div>
         </header>
         <div id="result"></div>
@@ -164,10 +165,10 @@ mariesnavarro.mn
           </div>
           <div class="col_2">
             <label for="message">
-                <textarea name="message" id="message" placeholder="Message*"></textarea>
+                <textarea name="message" id="message" placeholder="Mensaje*"></textarea>
             </label>
             <label>
-                <button class="submit_btn" id="submit_btn">Send</button>
+                <button id="submit_btn"class="submit_btn trans">Enviar Mensaje</button>
             </label>
           </div>
         </fieldset>

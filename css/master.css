@@ -232,7 +232,7 @@ nav.menu>div>ul>li>a>p{
   color: #fff;
   opacity: 0;
 }
-nav.menu>div>p{ display: none }
+nav.menu>div>p:nth-child(3){ display: none }
 nav.menu>div>#redes>a{
   padding: 10px;
 }
@@ -245,9 +245,23 @@ nav.menu>div>#redes>a{
   height: 100vh;
   background: rgba(255,255,255,0.9);
   z-index: 1000;
+  opacity: 0;
+  display: none;
 }
-#contact>ul{
+#contact>ul{ position: relative }
+#contact>ul>a:nth-child(3){
   position: relative;
+  width: 35px;
+  height: 29px;
+}
+#contact>ul>a:nth-child(3)>span{
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #517a76;
+  border-radius: 1px;
 }
 #contact>div{
   position: relative;
@@ -256,6 +270,8 @@ nav.menu>div>#redes>a{
   padding: 20px;
   background: #fff;
 }
+
+
 #contact>#wr>header{
   width: 100%;
   text-align: center;
@@ -263,19 +279,67 @@ nav.menu>div>#redes>a{
 #contact>#wr>header>p{ display: none; }
 #contact>#wr>header>div>p:first-child{ display: none; }
 #contact>#wr>span{
-  display: block;
+  display: none;
   width: 100%;
   height: 2px;
   background: #a6a7a7;
   margin: 10px 0;
 }
 #contact>#wr>fieldset{
-  flex-direction: row;
-  background: red;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
 }
-#contact>#wr>fieldset>div{
-  width: 50%;
-  background: green;
+#contact>#wr>fieldset>div{ width: 100% }
+#contact>#wr>fieldset>div>label>input, #contact>#wr>fieldset>div>label>textarea{
+  font-family: inherit;
+  font-size: inherit;
+  color: #517a76;
+  position: relative;
+  border-radius: 0;
+  width: 100%;
+  height: 30px;
+  margin: 5px 0;
+  border: 0;
+  border-bottom: 2px solid #a6a7a7;
+}
+#contact>#wr>fieldset>div>label>textarea{
+  padding: 2px;
+  border: 2px solid #a6a7a7;
+  margin-top: 10px;
+  height: 50px;
+}
+#contact>#wr>fieldset>div>label>input::placeholder,
+#contact>#wr>fieldset>div>label>input::-webkit-input-placeholder,
+#contact>#wr>fieldset>div>label>textarea::placeholder{
+  font-family: inherit;
+  color: #517a76;
+  font-weight: 600;
+}
+#contact>#wr>fieldset>div>label>button{
+  border: 2px solid #517a76;
+  color: #517a76;
+  background: #fff;
+  border-radius: 0;
+  padding:10px 5px;
+  font-weight: 600;
+  cursor: pointer;
+}
+#contact>#wr>fieldset>div>label>button:hover{
+  border: 2px solid #fff;
+  color: #fff;
+  background: #517a76;
+}
+@media screen and (min-height: 520px){
+  #contact>#wr>fieldset>div>label>input, #contact>#wr>fieldset>div>label>textarea{
+    height: 40px;
+    margin: 10px 0;
+  }
+  #contact>#wr>fieldset>div>label>textarea{
+    height: 80px;
+  }
 }
 /* index */
 #main{
@@ -316,7 +380,62 @@ nav.menu>div>#redes>a{
     display: block;
     text-align: justify;
   }
-    nav.menu>div>#redes{
-      margin-left: -5px;
-    }
+  nav.menu>div>p:nth-child(3){ display: block }
+  nav.menu>div>#redes{ margin-left: -5px; }
+  #contact>#wr{
+    width: 90%;
+    margin-top: 100px;
+    padding: 40px 20px;
+  }
+  #contact>#wr>header{
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    text-align: left;
+  }
+  #contact>#wr>header>p{
+    display: block;
+    width: 40%;
+    height: 80px;
+    line-height: 90px;
+  }
+  #contact>#wr>header>div{
+    width: 60%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+  }
+  #contact>#wr>header>div>p{ width: 40%; }
+  #contact>#wr>header>div>p:first-child{ display: block; }
+  #contact>#wr>fieldset{
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    align-items: center;
+    -webkit-justify-content: space-between;
+    -moz-justify-content: space-between;
+    -ms-justify-content: space-between;
+    -o-justify-content: space-between;
+    justify-content: space-between;
+  }
+  #contact>#wr>fieldset>div{ width: 40%; }
+  #contact>#wr>fieldset>div>label>textarea{
+    margin-top: 40px;
+  }
+  #contact>#wr>fieldset>div>label>button{ float: right; }
 }
