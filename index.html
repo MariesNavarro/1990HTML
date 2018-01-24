@@ -52,7 +52,128 @@ mariesnavarro.mn
     <link rel="stylesheet" href="css/master.css">
   </head>
   <body>
+    <!-- MENU NAV -->
+    <ul id="nav" class="showDisplayFlex trans">
+      <a role="button" onclick="menu('open', this)">
+        <div class="ham showDisplayFlex">
+          <span class="trans"></span>
+          <span class="trans"></span>
+          <span class="trans"></span>
+        </div>
+        <div class="close hideDisplay" onmouseover="overClose('over', this)" onmouseout="overClose('out', this)">
+          <span class="cw45 trans"></span>
+          <span class="ccw45 trans"></span>
+        </div>
+      </a>
 
+      <a href="index.html">
+        <img class="trans" src="img/logotipo-letras-diecinuevenoventa.svg" height="35">
+      </a>
+
+      <a role="button" onclick="contact('open')">
+        <img class="trans" src="img/ic/mail_1.svg" height="23">
+      </a>
+    </ul>
+    <!-- MENU INDEX -->
+    <nav class="menu showDisplayFlex trans">
+      <div class="showDisplayFlex">
+        <a role="button" onmouseover="overClose('over', this)" onmouseout="overClose('out', this)" onclick="menu('close')">
+          <span class="cw45 trans"></span>
+          <span class="ccw45 trans"></span>
+        </a>
+        <ul>
+          <li>
+            <a href="">
+              <p class="trans7 plinks">Inicio</p>
+              <span class="trans7 lineslinks"></span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p class="trans7 plinks">Proyectos</p>
+              <span class="trans7 lineslinks"></span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p class="trans7 plinks">Equipo</p>
+              <span class="trans7 lineslinks"></span>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <p class="trans7 plinks">Contacto</p>
+              <span class="trans7 lineslinks"></span>
+            </a>
+          </li>
+        </ul>
+        <p>
+          Productora Audiovisual creada con
+          el propósito de realizar un discurso
+          que vaya encaminado con nuestros clientes.
+        </p>
+        <div id="redes">
+          <a href="https://vimeo.com/diecinuevenoventa" rel=“noopener noreferrer” target=“_blank”><img src="img/ic/vim_out.svg" onmouseover="overIcon('over', 'vim_', this)" onmouseout="overIcon('out', 'vim_', this)" width="35"></a>
+          <a href="https://www.instagram.com/diecinueve.noventa/" rel=“noopener noreferrer” target=“_blank”><img src="img/ic/ig_out.svg" onmouseover="overIcon('over', 'ig_', this)" onmouseout="overIcon('out', 'ig_', this)" width="35"></a>
+          <a href="https://www.facebook.com/19noventa/" rel=“noopener noreferrer” target=“_blank”><img src="img/ic/fb_out.svg" onmouseover="overIcon('over', 'fb_', this)" onmouseout="overIcon('out', 'fb_', this)" width="35"></a>
+        </div>
+        <p>Todos Los Derechos Reservados</p>
+      </div>
+
+    </nav>
+    <div id="main" class="trans">
+      <!-- CONTENT -->
+      <ul id="sliderCover">
+        <li class="backImg" style="background-image:url('../img/for_back.png')"></li>
+        <li class="backImg" style="background-image:url('../img/for_back_1.png')"></li>
+        <li class="backImg" style="background: orange;)"></li>
+        <li class="backImg" style="background: yellow;)"></li>
+      </ul>
+    </div>
+    <div id="contact">
+      <ul class="showDisplayFlex">
+        <div></div>
+        <a id="logo" href="index.html">
+          <img class="trans" src="img/logotipo-letrasverde-diecinuevenoventa.svg" height="35">
+        </a>
+        <a href="">
+          <img class="trans" src="img/ic/close.svg" height="23">
+        </a>
+      </ul>
+      <div id="wr">
+        <header>
+          <p>Ponte en contacto con nosotros</p>
+          <div>
+            <p> Juan Vázquez De Mella 442, Morales Polanco. <br> Miguel Hidalgo, #11510 <b>Ciudad de México</b>  </p>
+            <p> +52 55 123 4567 <br> <b>info@diecinuevenoventa.com</b> </p>
+          </div>
+        </header>
+        <div id="result"></div>
+        <span></span>
+        <fieldset class="showDisplayFlex">
+          <div class="col_1">
+            <label for="name">
+              <input name="name" id="name" placeholder="Nombre*" type="text">
+            </label>
+            <label for="email">
+              <input name="email" id="email" placeholder="Correo*" type="email">
+            </label>
+            <label for="subject">
+                <input name="subject" id="subject" placeholder="Asunto*" type="subject">
+            </label>
+          </div>
+          <div class="col_2">
+            <label for="message">
+                <textarea name="message" id="message" placeholder="Message*"></textarea>
+            </label>
+            <label>
+                <button class="submit_btn" id="submit_btn">Send</button>
+            </label>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    <script src="js/bowser.min.js" charset="utf-8"></script>
   <script src="js/main.js" charset="utf-8"></script>
   </body>
 </html>
