@@ -50,6 +50,7 @@ mariesnavarro.mn
     <meta name="theme-color" content="#ffffff">
     <link rel="icon" type="image/x-icon" href="fav/favicon.ico">
     <link rel="stylesheet" href="css/master.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
   <body>
     <p id="s"></p>
@@ -124,8 +125,22 @@ mariesnavarro.mn
     </nav>
     <div id="main" class="trans">
       <!-- Videos -->
-      <ul id="sliderCover">
-        <li class="backImg" style="background-image:url('../img/for_back.png')"></li>
+      <ul id="sliderCover" class="showDisplayFlex trans">
+        <li>
+          <iframe src="https://player.vimeo.com/video/226678522?api=1&autoplay=1&loop=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </li>
+        <li>
+          <iframe src="https://player.vimeo.com/video/226679889?api=1&autoplay=1&loop=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </li>
+        <li>
+          <iframe src="https://player.vimeo.com/video/253135148?api=1&autoplay=1&loop=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </li>
+        <li>
+          <iframe src="https://player.vimeo.com/video/226676735?api=1&autoplay=1&loop=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </li>
+        <li>
+          <iframe src="https://player.vimeo.com/video/226679072?api=1&autoplay=1&loop=1" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </li>
       </ul>
       <!-- Interface -->
       <div id="interface">
@@ -134,9 +149,9 @@ mariesnavarro.mn
             <ul class="showDisplayFlex trans">
               <li>
                 <div class="col_1">
-                  <a role="button">Jealous</a>
+                  <a role="button" class="trans" onclick="sliderCount('prev')">Jealous</a>
                   <h2><span>Reel</span></h2>
-                  <a role="button">Traficantes del Folk</a>
+                  <a role="button" class="trans" onclick="sliderCount('next')">Traficantes del Folk</a>
                 </div>
                 <div class="col_2">
                   <a href="">
@@ -147,9 +162,9 @@ mariesnavarro.mn
               </li>
               <li>
                 <div class="col_1">
-                  <a role="button">Reel</a>
+                  <a role="button" class="trans" onclick="sliderCount('prev')">Reel</a>
                   <h2><span>Traficantes del Folk</span></h2>
-                  <a role="button">Ricardo Seco</a>
+                  <a role="button" class="trans" onclick="sliderCount('next')">Ricardo Seco</a>
                 </div>
                 <div class="col_2">
                   <a href="">
@@ -160,9 +175,9 @@ mariesnavarro.mn
               </li>
               <li>
                 <div class="col_1">
-                  <a role="button">Traficantes del Folk</a>
+                  <a role="button" class="trans" onclick="sliderCount('prev')">Traficantes del Folk</a>
                   <h2><span>Ricardo Seco</span></h2>
-                  <a role="button">Quedo De Ti</a>
+                  <a role="button" class="trans" onclick="sliderCount('next')">Quedo De Ti</a>
                 </div>
                 <div class="col_2">
                   <a href="">
@@ -177,9 +192,9 @@ mariesnavarro.mn
               </li>
               <li>
                 <div class="col_1">
-                  <a role="button">Ricardo Seco</a>
+                  <a role="button" class="trans" onclick="sliderCount('prev')">Ricardo Seco</a>
                   <h2><span>Quedo De Ti</span></h2>
-                  <a role="button">Jealous</a>
+                  <a role="button" class="trans" onclick="sliderCount('next')">Jealous</a>
                 </div>
                 <div class="col_2">
                   <a href="">
@@ -190,9 +205,9 @@ mariesnavarro.mn
               </li>
               <li>
                 <div class="col_1">
-                  <a role="button">Quedo De Ti</a>
+                  <a role="button" class="trans" onclick="sliderCount('prev')">Quedo De Ti</a>
                   <h2><span>Jealous</span></h2>
-                  <a role="button">Reel</a>
+                  <a role="button" class="trans" onclick="sliderCount('next')">Reel</a>
                 </div>
                 <div class="col_2">
                   <a href="">
@@ -207,11 +222,11 @@ mariesnavarro.mn
         </div>
         <!-- Bullets -->
         <div id="bulletsCover" class="showDisplayFlex">
-          <a role="button"></a>
-          <a role="button"></a>
-          <a role="button"></a>
-          <a role="button"></a>
-          <a role="button"></a>
+          <a role="button" onclick="bullets(0)"></a>
+          <a role="button" onclick="bullets(1)"></a>
+          <a role="button" onclick="bullets(2)"></a>
+          <a role="button" onclick="bullets(3)"></a>
+          <a role="button" onclick="bullets(4)"></a>
         </div>
       </div>
     </div>
@@ -235,34 +250,67 @@ mariesnavarro.mn
             <p> +52 55 123 4567 <br> <b style="color:#517a76">info@diecinuevenoventa.com</b> </p>
           </div>
         </header>
-        <div id="result"></div>
         <span></span>
-        <fieldset class="showDisplayFlex">
+        <form id="contact_form" class="showDisplayFlex">
           <div class="col_1">
             <label for="name">
-              <input name="name" id="name" placeholder="Nombre*" type="text">
+              <input id="name" name="name" placeholder="Nombre*" type="text">
             </label>
             <label for="email">
-              <input name="email" id="email" placeholder="Correo*" type="email">
+              <input id="email" name="email"  placeholder="Correo*" type="email">
             </label>
             <label for="subject">
-                <input name="subject" id="subject" placeholder="Asunto*" type="subject">
+                <input id="subject" name="subject"  placeholder="Asunto*" type="subject">
             </label>
           </div>
           <div class="col_2">
             <label for="message">
-                <textarea name="message" id="message" placeholder="Mensaje*"></textarea>
+                <textarea id="message" name="message" placeholder="Mensaje*"></textarea>
             </label>
             <label>
-                <button id="submit_btn"class="submit_btn trans">Enviar Mensaje</button>
+                <button id="submit_btn" class="submit_btn trans">Enviar Mensaje</button>
             </label>
           </div>
-        </fieldset>
+        </form>
+        <div id="result" class="trans"></div>
       </div>
     </div>
-    <script src="js/bowser.min.js" charset="utf-8"></script>
-  <script src="js/main.js" charset="utf-8"></script>
+    <script src="build/bowser.min.js" charset="utf-8"></script>
+  <script src="build/main.js" charset="utf-8"></script>
   <script>
+  $(document).ready(function(){
+    $('#submit_btn').click(function(e){
+      e.preventDefault();
+      $.ajax({
+        dataType: "JSON",
+        url: "build/php/parse.php",
+        type: "POST",
+        data: $('#contact_form').serialize(),
+        beforeSend: function(xhr){
+          $('#submit_btn').html('Enviado...');
+        },
+        success: function(response){
+          if(response){
+            if(response['signal'] == 'ok'){
+              $('#result').html('<div class="success">Gracias '+ response.name +', tu mensaje fue enviado. Pronto nos pondremos en contacto contigo.</div>');
+              $('input, textarea').val(function(){
+                return this.defaultValue;
+              });
+            } else {
+              $('#result').html('<div class="error"> '+ response.msg +' </div>');
+            }
+          }
+        },
+        error: function(response){
+          $('#result').html('<div class="error">Hubo un error al enviar tu mensaje. Tal vez nos quieras escribir desde tu correo a <b>info@info.com</b></div>');
+        },
+        complete: function(){
+            $('#submit_btn').html('Enviar Mensaje');
+        }
+      });
+    });
+  });
+
   window.onresize = function(){
     var s = _("#s").innerHTML = "Width: " + window.innerWidth + " x " + "Height:" + window.innerHeight;
     };
