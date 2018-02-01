@@ -31,18 +31,18 @@
 
       if(!$mail->send()){
         $signal = 'bad';
-        $msg = 'Error al procesar la información. Inténtalo de nuevo';
+        $msg = 'Error al procesar la información. Inténtalo de nuevo.';
       } else {
         $signal = 'ok';
         $msg = 'Los datos se procesaron correctamente.';
       }
     } else {
       $signal = 'bad';
-      $msg = 'Por favor ingresa un correo que sea válido';
+      $msg = 'Por favor ingresa un correo que sea válido.';
     }
   } else {
       $signal = 'bad';
-      $msg = 'Por favor llena todos los campos';
+      $msg = 'Por favor llena todos los campos.';
   }
 
   $data = array(
